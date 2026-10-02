@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>القبلة 🧭</title>
+
+  <link
+    rel="stylesheet"
+    href="./qibla.css"
+  >
+</head>
+
+<body>
+
+  <main class="qibla-app">
+
+    <header class="qibla-header">
+
+      <button
+        id="backButton"
+        class="back-button"
+      >
+        ←
+      </button>
+
+      <div>
+        <h1>القبلة</h1>
+        <p>اتجاه القبلة من موقعك</p>
+      </div>
+
+    </header>
+
+    <section class="location-box">
+
+      <span>📍</span>
+
+      <span id="locationText">
+        جاري تحديد موقعك...
+      </span>
+
+    </section>
+
+    <section class="compass-section">
+
+      <div
+        id="compass"
+        class="compass"
+      >
+
+        <div class="direction north">
+          N
+        </div>
+
+        <div class="direction east">
+          E
+        </div>
+
+        <div class="direction south">
+          S
+        </div>
+
+        <div class="direction west">
+          W
+        </div>
+
+        <div class="compass-ring">
+
+          <div
+            id="qiblaArrow"
+            class="qibla-arrow"
+          >
+            🕋
+          </div>
+
+          <div class="center-point"></div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="degree-box">
+
+      <div
+        id="degree"
+        class="degree"
+      >
+        --°
+      </div>
+
+      <div
+        id="status"
+        class="status"
+      >
+        جاري حساب اتجاه القبلة...
+      </div>
+<div
+  id="distance"
+    class="distance"
+    >
+      📏 جاري حساب المسافة إلى مكة...
+      </div>
+      <div
+  id="turnDirection"
+  class="turn-direction"
+>
+  🧭 شغّل البوصلة لمعرفة الاتجاه
+</div>
+    </section>
+
+    <button
+      id="startCompass"
+      class="start-button"
+    >
+      🧭 تشغيل البوصلة
+    </button>
+
+    <p class="hint">
+      أمسك الهاتف بشكل مسطح وحركه ببطء حتى يستقر السهم باتجاه 🕋
+    </p>
+
+    <button
+      id="backHome"
+      class="home-button"
+    >
+      🕌 العودة إلى أوقات الصلاة
+    </button>
+
+  </main>
+
+  <script
+    type="module"
+    src="./qibla.js"
+  ></script>
+
+</body>
+
+</html>

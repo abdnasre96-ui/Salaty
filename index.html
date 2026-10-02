@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>صلاتي</title>
+
+  <link rel="stylesheet" href="./src/style.css">
+  <link rel="manifest" href="./manifest.webmanifest">
+</head>
+
+<body>
+
+  <main id="app">
+
+    <header class="header">
+
+      <div class="logo">
+        🕌
+      </div>
+
+      <div>
+        <h1>صلاتي</h1>
+        <p>أوقات الصلاة</p>
+      </div>
+
+      <button id="settingsBtn" class="icon-button">
+        ⚙️
+      </button>
+
+    </header>
+
+
+    <section class="date-card">
+
+      <div>
+        <span id="gregorianDate">--</span>
+        <small>التاريخ الميلادي</small>
+      </div>
+
+      <div>
+        <span id="hijriDate">--</span>
+        <small>التاريخ الهجري</small>
+      </div>
+
+    </section>
+
+
+    <section class="location-card">
+      📍
+      <span id="location">
+        جاري تحديد الموقع...
+      </span>
+    </section>
+
+
+    <section class="next-card">
+
+      <p>الصلاة القادمة</p>
+
+      <h2 id="nextPrayer">
+        --
+      </h2>
+
+      <div id="nextTime">
+        --:--
+      </div>
+
+      <div class="countdown">
+        ⏳
+        <span id="countdown">
+          جاري الحساب...
+        </span>
+      </div>
+
+    </section>
+
+
+    <h3 class="title">
+      أوقات اليوم
+    </h3>
+
+
+    <section class="prayers">
+
+      <div class="prayer" id="prayer-fajr">
+        <span>🌙 الفجر</span>
+        <strong id="fajr">--:--</strong>
+      </div>
+
+      <div class="prayer">
+        <span>🌅 الشروق</span>
+        <strong id="sunrise">--:--</strong>
+      </div>
+
+      <div class="prayer" id="prayer-dhuhr">
+        <span>☀️ الظهر</span>
+        <strong id="dhuhr">--:--</strong>
+      </div>
+
+      <div class="prayer" id="prayer-asr">
+        <span>🌤️ العصر</span>
+        <strong id="asr">--:--</strong>
+      </div>
+
+      <div class="prayer" id="prayer-maghrib">
+        <span>🌅 المغرب</span>
+        <strong id="maghrib">--:--</strong>
+      </div>
+
+      <div class="prayer" id="prayer-isha">
+        <span>🌙 العشاء</span>
+        <strong id="isha">--:--</strong>
+      </div>
+
+    </section>
+
+
+    <section class="buttons">
+
+      <button id="qibla">
+        🧭
+        <span>القبلة</span>
+      </button>
+
+      <button id="notifications">
+        🔔
+        <span>الإشعارات</span>
+      </button>
+
+      <button id="notificationSettings">
+          ⚙️
+            <span>إعدادات التنبيه</span>
+            </button>
+
+    </section>
+
+
+    <footer>
+      صلاتي 🕌
+    </footer>
+<!-- ======================================== -->
+<!-- لوحة إعدادات التنبيه 🔔 -->
+<!-- ======================================== -->
+
+<section
+  id="notificationPanel"
+  class="notification-panel"
+  style="display: none;"
+>
+
+  <div class="notification-panel-header">
+
+    <h3>
+      🔔 إعدادات التنبيه
+    </h3>
+
+    <button
+      id="closeNotificationPanel"
+      class="close-notification"
+    >
+      ✕
+    </button>
+
+  </div>
+
+  <div class="notification-option">
+
+    <span>
+      🕌 تنبيه عند دخول وقت الصلاة
+    </span>
+
+    <label class="switch">
+
+      <input
+        type="checkbox"
+        id="prayerNotification"
+        checked
+      >
+
+      <span class="slider"></span>
+
+    </label>
+
+  </div>
+
+  <div class="notification-option">
+
+    <span>
+      ⏰ تنبيه قبل الصلاة بـ 10 دقائق
+    </span>
+
+    <label class="switch">
+
+      <input
+        type="checkbox"
+        id="beforePrayerNotification"
+      >
+
+      <span class="slider"></span>
+
+    </label>
+
+  </div>
+
+  <div class="notification-option">
+
+    <span>
+      🌙 تنبيه صلاة الفجر
+    </span>
+
+    <label class="switch">
+
+      <input
+        type="checkbox"
+        id="fajrNotification"
+      >
+
+      <span class="slider"></span>
+
+    </label>
+
+  </div>
+
+  <div class="notification-option">
+
+    <span>
+      🔊 الأذان
+    </span>
+
+    <label class="switch">
+
+      <input
+        type="checkbox"
+        id="adhanNotification"
+      >
+
+      <span class="slider"></span>
+
+    </label>
+
+  </div>
+
+  <p class="notification-note">
+    سيتم حفظ اختياراتك على هذا الجهاز.
+  </p>
+
+</section>
+  </main>
+
+
+  <script type="module" src="./app.js"></script>
+
+</body>
+</html>

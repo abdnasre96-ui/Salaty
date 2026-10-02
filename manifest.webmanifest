@@ -1,0 +1,13 @@
+{
+  "name": "صلاتي",
+  "short_name": "صلاتي",
+  "description": "أوقات الصلاة والقبلة",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#071411",
+  "theme_color": "#17483b",
+  "orientation": "portrait"
+}
