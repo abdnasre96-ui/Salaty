@@ -1,0 +1,406 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+  background:
+    radial-gradient(
+      circle at top,
+      #17483b,
+      #071411 55%
+    );
+
+  color: white;
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  min-height: 100vh;
+
+  direction: rtl;
+}
+
+
+#app {
+  width: 100%;
+  max-width: 520px;
+
+  margin: auto;
+
+  padding: 20px 16px 30px;
+}
+
+
+/* HEADER */
+
+.header {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 20px;
+}
+
+.logo {
+  font-size: 45px;
+}
+
+.header h1 {
+  margin: 0;
+
+  font-size: 30px;
+}
+
+.header p {
+  margin: 4px 0 0;
+
+  color: #9db8b0;
+}
+
+
+.icon-button {
+  margin-right: auto;
+
+  border: 0;
+
+  background: #173229;
+
+  color: white;
+
+  border-radius: 14px;
+
+  padding: 12px;
+
+  font-size: 18px;
+}
+
+
+/* DATE */
+
+.date-card {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 10px;
+
+  background: #10261f;
+
+  padding: 17px;
+
+  border-radius: 20px;
+
+  margin-bottom: 12px;
+}
+
+.date-card div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.date-card span {
+  font-size: 15px;
+
+  font-weight: bold;
+}
+
+.date-card small {
+  color: #7f9991;
+}
+
+
+/* LOCATION */
+
+.location-card {
+  text-align: center;
+
+  background: #10261f;
+
+  padding: 13px;
+
+  border-radius: 16px;
+
+  color: #b3c9c2;
+
+  margin-bottom: 15px;
+}
+
+
+/* NEXT PRAYER */
+
+.next-card {
+  text-align: center;
+
+  padding: 30px 18px;
+
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #1b5b4b,
+      #0c3027
+    );
+
+  box-shadow:
+    0 15px 40px rgba(0,0,0,.25);
+
+  margin-bottom: 25px;
+}
+
+.next-card p {
+  margin: 0;
+
+  color: #b9d1ca;
+}
+
+.next-card h2 {
+  margin: 10px 0;
+
+  font-size: 32px;
+}
+
+#nextTime {
+  font-size: 50px;
+
+  font-weight: bold;
+}
+
+.countdown {
+  margin-top: 15px;
+
+  color: #c8dad5;
+
+  font-size: 17px;
+}
+
+
+/* TITLE */
+
+.title {
+  margin: 0 5px 12px;
+
+  color: #d0dfda;
+}
+
+
+/* PRAYERS */
+
+.prayers {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 9px;
+}
+
+.prayer {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 18px;
+
+  border-radius: 17px;
+
+  background: #10261f;
+
+  transition:
+    .25s ease;
+}
+
+.prayer strong {
+  font-size: 19px;
+}
+
+.prayer.active {
+  background: #1c604f;
+
+  transform:
+    scale(1.015);
+
+  box-shadow:
+    0 8px 25px rgba(0,0,0,.25);
+}
+
+
+/* BUTTONS */
+
+.buttons {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 10px;
+
+  margin-top: 18px;
+}
+
+.buttons button {
+  border: 0;
+
+  background: #173229;
+
+  color: white;
+
+  padding: 17px;
+
+  border-radius: 17px;
+
+  font-size: 17px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+.buttons button:active {
+  transform: scale(.97);
+}
+
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+
+  color: #617970;
+
+  padding-top: 30px;
+
+  font-size: 14px;
+}
+
+
+/* SMALL PHONES */
+
+@media (max-width: 380px) {
+
+  #app {
+    padding:
+      15px 12px 25px;
+  }
+
+  #nextTime {
+    font-size: 42px;
+  }
+
+  .next-card h2 {
+    font-size: 28px;
+  }
+
+}
+/* ========================================
+   إعدادات التنبيه 🔔
+======================================== */
+
+.notification-panel {
+  margin-top: 18px;
+  padding: 18px;
+  background: #10261f;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0,0,0,.25);
+}
+
+.notification-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.notification-panel-header h3 {
+  margin: 0;
+  font-size: 19px;
+}
+
+.close-notification {
+  border: 0;
+  background: #173229;
+  color: white;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  font-size: 18px;
+}
+
+.notification-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255,255,255,.07);
+  color: #d5e2de;
+  font-size: 15px;
+}
+
+.notification-option:last-of-type {
+  border-bottom: 0;
+}
+
+/* زر التشغيل */
+
+.switch {
+  position: relative;
+  width: 48px;
+  height: 27px;
+  flex-shrink: 0;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  inset: 0;
+  background: #30443e;
+  border-radius: 30px;
+  transition: .25s;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  left: 3px;
+  top: 3px;
+  background: white;
+  border-radius: 50%;
+  transition: .25s;
+}
+
+.switch input:checked + .slider {
+  background: #1c604f;
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(21px);
+}
+
+.notification-note {
+  margin: 15px 0 0;
+  color: #718b83;
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: center;
+}
