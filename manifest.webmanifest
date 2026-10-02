@@ -1,5 +1,5 @@
 {
-  "name": "صلاتي",
+  "name": "صلاتي أفيستا",
   "short_name": "صلاتي",
   "description": "أوقات الصلاة والقبلة",
   "lang": "ar",
@@ -11,16 +11,10 @@
   "theme_color": "#17483b",
   "orientation": "portrait",
   "icons": [
-  {
-    "src": "./icon.png",
-    "sizes": "192x192",
-    "type": "image/png"
-  }
-]
-      "src": "./icon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any"
+    {
+      "src": "./icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
     }
   ]
 }
